@@ -1,0 +1,22 @@
+<body>
+  {{>todo}}
+</body>
+<template name="todo">
+  <div class="container">
+    <div class="row">
+      <div class="well">Meteor TODO demo</div>
+
+      <ul class="list-group">
+        {{#each tasks}} {{> task}} {{/each}}
+      </ul>
+    </div>
+    <div class="row">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Todo Item">
+        <span class="input-group-btn">
+        <button class="btn btn-default addItem" type="button">Add</button>
+      </span>
+      </div>
+    </div>
+  </div>
+</template>
